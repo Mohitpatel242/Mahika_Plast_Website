@@ -113,10 +113,9 @@ img { max-width: 100%; display: block; }
 
 /* Logo Image Styling */
 .logo-img {
-    height: 60px;
+    height: 40px;
     width: auto;
     object-fit: contain;
-    margin-left: 1rem;
 }
 
 .nav-links { display: flex; gap: 30px; }
