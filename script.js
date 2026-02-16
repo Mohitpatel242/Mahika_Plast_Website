@@ -1,5 +1,5 @@
 /* ========================================
-   1. DATA CONFIGURATION (ML Engineer Editable)
+   1. DATA CONFIGURATION
    ========================================
 */
 
@@ -94,7 +94,6 @@ function renderServices() {
     const grid = document.getElementById('service-grid');
     if(!grid) return;
 
-    // Updated Card Structure with Background Image and Button
     grid.innerHTML = servicesData.map(service => `
         <div class="service-card" style="background-image: url('${service.image}');">
             <div class="service-content">
@@ -130,7 +129,7 @@ function renderProducts() {
 }
 
 /* ========================================
-   3. MODAL LOGIC (New)
+   3. MODAL LOGIC
    ========================================
 */
 
@@ -153,14 +152,11 @@ function openModal(type, id) {
     if (data) {
         modalImg.src = data.image;
         modalTitle.innerText = data.title;
-        // Use the long details if available, otherwise fallback to short description
         modalDesc.innerText = data.details || data.shortDesc;
-        
         modal.classList.add('active');
     }
 }
 
-// Close Modal Logic
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('info-modal');
     const closeBtn = document.querySelector('.modal-close');
@@ -171,12 +167,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close on click outside
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.classList.remove('active');
         }
     });
+
+    // --- MOBILE MENU LOGIC (New) ---
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    if(menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Optional: Toggle icon between bars and times (X)
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+    }
 });
 
 
@@ -252,9 +277,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const statsSection = document.querySelector('.stats-section');
     if(statsSection) statsObserver.observe(statsSection);
 
-    // --- Creative: Mouse Parallax ---
+    // --- Creative: Mouse Parallax (Only on Desktop) ---
     const heroSection = document.querySelector('.hero');
-    if(heroSection) {
+    if(heroSection && window.matchMedia("(min-width: 769px)").matches) {
         heroSection.addEventListener('mousemove', (e) => {
             const x = (window.innerWidth - e.pageX * 2) / 100;
             const y = (window.innerHeight - e.pageY * 2) / 100;
