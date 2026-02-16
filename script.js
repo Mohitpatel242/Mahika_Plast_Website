@@ -8,7 +8,7 @@ const servicesData = [
         id: 1,
         title: "Industrial Automation",
         icon: "fa-robot", 
-        image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "project1.png",
         shortDesc: "PLC programming and sensor integration for smarter manufacturing lines.",
         details: "We provide complete PLC logic design, HMI development, and SCADA integration. Our automation solutions reduce human error by 40% and increase throughput by streamlining the communication between your sensors, conveyors, and robotic arms. We use industry-standard controllers like Siemens, Allen-Bradley, and Delta."
     },
@@ -48,7 +48,7 @@ const servicesData = [
         id: 6,
         title: "Servo System Retrofit",
         icon: "fa-microchip",
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "servo.png",
         shortDesc: "Replacing old hydraulics with energy-efficient servo motors.",
         details: "Replace constant-speed induction motors with servo-driven hydraulic pumps. This retrofit yields power savings of up to 60%, reduces oil heating, and provides faster cycle times with higher precision for injection moulding applications."
     }
