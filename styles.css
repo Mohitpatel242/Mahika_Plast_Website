@@ -201,6 +201,7 @@ img { max-width: 100%; display: block; }
 .img-card {
     position: absolute; border-radius: 10px; overflow: hidden;
     box-shadow: var(--shadow-card); transition: transform 0.5s;
+    object-fit: cover; 
 }
 .img-card:hover { transform: scale(1.02); }
 .img-main { width: 80%; height: 80%; top: 0; right: 0; z-index: 1; }

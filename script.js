@@ -10,7 +10,7 @@ const servicesData = [
         icon: "fa-robot", 
         image: "project1.png",
         shortDesc: "PLC programming and sensor integration for smarter manufacturing lines.",
-        details: "We provide complete PLC logic design, HMI development, and SCADA integration. Our automation solutions reduce human error by 40% and increase throughput by streamlining the communication between your sensors, conveyors, and robotic arms. We use industry-standard controllers like Siemens, Allen-Bradley, and Delta."
+        details: "We provide complete PLC logic design, HMI development, and SCADA integration. Our automation solutions reduce human error by 40% and increase throughput by streamlining the communication between your sensors, conveyors, and robotic arms."
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const servicesData = [
         id: 3,
         title: "Mechanical Services",
         icon: "fa-gears",
-        image: "https://images.unsplash.com/photo-1531297461136-82lw9z3x?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "machanical.png",
         shortDesc: "Heavy machinery maintenance, alignment, and mechanical repairs.",
         details: "Specializing in toggle link mechanisms and hydraulic cylinder repairs. We offer laser alignment for motor shafts, gearbox overhauling, and preventative maintenance schedules to minimize downtime in your injection moulding plant."
     },
@@ -40,7 +40,7 @@ const servicesData = [
         id: 5,
         title: "Heater & Powder Panels",
         icon: "fa-temperature-high",
-        image: "https://images.unsplash.com/photo-1581093588402-4857474d5fca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "panel.jpg",
         shortDesc: "Custom fabrication of control panels for heating and coating systems.",
         details: "Our panels utilize PID controllers with Solid State Relays (SSR) for precise temperature control within +/- 1 degree. Ideal for powder coating ovens, plastic extrusion heating zones, and industrial furnaces."
     },
@@ -59,7 +59,7 @@ const productsData = [
         id: 1,
         title: "Custom PLC Panel",
         category: "Electronics",
-        image: "https://images.unsplash.com/photo-1555664424-778a6902201b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        image: "panel.jpg",
         details: "A fully customized PLC panel built for complex logic operations. Features IP65 protection, cooling fans, and neat wiring dressing."
     },
     {
